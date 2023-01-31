@@ -19,17 +19,23 @@ function App() {
         <main>
           <div className="Category">
             {tab.map((elem, index) => {
-              tab.map((elem, index) => {
-                return elem.images;
-              });
               return (
                 <>
-                  <h1 key={index} className="title">
-                    {elem.category}
-                  </h1>
-                  <ul key={index} className="images">
-                    <li>{elem.images}</li>
-                  </ul>
+                  <div>
+                    <h1 key={index} className="title">
+                      {elem.category}
+                    </h1>
+                    {tab.map((item, index) => {
+                      return (
+                        <img
+                          key={index}
+                          className="images"
+                          src={item.images}
+                          alt=""
+                        />
+                      );
+                    })}
+                  </div>
                 </>
               );
             })}
