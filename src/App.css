@@ -17,6 +17,4 @@ main img {
   object-fit: contain;
   margin-top: 30px;
   border: 1px solid black;
-  display: flex;
-  overflow: hidden;
 }
