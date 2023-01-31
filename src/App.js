@@ -15,33 +15,33 @@ const tab = Data;
 function App() {
   return (
     <>
-      <body>
-        <main>
-          <div className="Category">
-            {tab.map((elem, index) => {
-              return (
-                <>
-                  <div>
-                    <h1 key={index} className="title">
-                      {elem.category}
-                    </h1>
-                    {tab.map((item, index) => {
-                      return (
-                        <img
-                          key={index}
-                          className="images"
-                          src={item.images}
-                          alt=""
-                        />
-                      );
-                    })}
-                  </div>
-                </>
-              );
-            })}
-          </div>
-        </main>
-      </body>
+      <img
+        className="logo"
+        src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
+        alt=""
+      />
+      <main>
+        <div className="Category">
+          {tab.map((elem, index) => {
+            // console.log(elem);
+            return (
+              <div>
+                <h1 key={index} className="title">
+                  {elem.category}
+                </h1>
+                <div className="image-block">
+                  {elem.images.map((item, index) => {
+                    console.log(item);
+                    return (
+                      <img key={index} className="images" src={item} alt="" />
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </main>
     </>
   );
 }

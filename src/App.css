@@ -3,12 +3,25 @@
 body {
   width: 1920px;
   font-family: "Roboto", sans-serif;
-  background-color: darkgrey;
+  background-color: black;
 }
 
+.logo {
+  width: 160px;
+  margin-left: 13px;
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  margin-top: 35px;
+}
 main {
   margin-top: 50px;
-  margin-left: 30px;
+  margin-left: 40px;
+  margin-bottom: 100px;
 }
 
 main img {
@@ -17,5 +30,16 @@ main img {
   object-fit: contain;
   margin-top: 30px;
   border: 1px solid black;
-  overflow: hidden;
+}
+
+.image-block {
+  display: flex;
+  overflow-x: scroll;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.image-block::-webkit-scrollbar {
+  display: none;
 }
