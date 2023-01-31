@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Data from "../src/data.json";
+
+const tab = Data;
+const titles = tab.map((elem) => {
+  return elem.category;
+});
+// console.log(titles);
+
+const allImages = tab.map((elem) => {
+  return elem.images;
+});
+// console.log(allImages);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <body> */}
+      <main>
+        <div className="Category">
+          <h1>{titles[0]}</h1>
+          <img src={allImages[0][0]} alt="" />
+        </div>
+      </main>
+      {/* </body> */}
+    </>
   );
 }
 
