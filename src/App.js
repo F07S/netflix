@@ -1,16 +1,7 @@
 import "./App.css";
 import Data from "../src/data.json";
 
-const tab = Data;
-// const titles = tab.map((elem) => {
-//   return elem.category;
-// });
-// console.log(titles);
-
-// const allImages = tab.map((elem) => {
-//   return elem.images;
-// });
-// console.log(allImages);
+const categoryTab = Data;
 
 function App() {
   return (
@@ -21,19 +12,22 @@ function App() {
         alt=""
       />
       <main>
-        <div className="Category">
-          {tab.map((elem, index) => {
-            // console.log(elem);
+        <div>
+          {categoryTab.map((category, index) => {
             return (
               <div>
-                <h1 key={index} className="title">
-                  {elem.category}
+                <h1 key={index} className="category-title">
+                  {category.category}
                 </h1>
                 <div className="image-block">
-                  {elem.images.map((item, index) => {
-                    console.log(item);
+                  {category.images.map((movie, index) => {
                     return (
-                      <img key={index} className="images" src={item} alt="" />
+                      <img
+                        key={index}
+                        className="movie-images"
+                        src={movie}
+                        alt="movie"
+                      />
                     );
                   })}
                 </div>
